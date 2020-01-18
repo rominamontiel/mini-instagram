@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 10vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-weight: normal;
+                font-size: 0.9rem;
+                background: #e4b8c5;
+                border-radius: 7px;
+                padding: 5px;
+                color: white;
+                margin-bottom: 2rem;
+        }
+        section{
+            width: 80vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 300px);
+            grid-gap: 1rem;
+        }
+        .box-pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .section-large{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        @media(max-width:992px){
+            section{
+                width: calc(100% - 1rem);
+                grid-template-rows: repeat(4, 200px);
+                grid-gap: .5rem;
+            }            
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="btn">Cambiar vista</h2>
+    <section id="vista">
+        <div class="box-pic"><img src="/DISEÑO1.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO8.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO3.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO7.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO2.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO9.jpg" alt=""></div>
+        <!-- <div class="box-pic"><img src="/DISEÑO4.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO5.jpg" alt=""></div>
+        <div class="box-pic"><img src="/DISEÑO6.jpg" alt=""></div> -->
+        <div class="box-pic"><img src="/b1.jpg" alt=""></div>
+        <div class="box-pic"><img src="/b2.jpg" alt=""></div>
+        <div class="box-pic"><img src="/b3.jpg" alt=""></div>
+        <div class="box-pic"><img src="/b4.jpg" alt=""></div>
+        <div class="box-pic"><img src="/b5.jpg" alt=""></div>
+        <div class="box-pic"><img src="/b6.jpg" alt=""></div>
+
+    </section>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const vista = document.getElementById('vista');
+
+        btn.onclick = function(){            
+           vista.classList.toggle('section-large');            
+        }
+
+    </script>
+</body>
+</html>
